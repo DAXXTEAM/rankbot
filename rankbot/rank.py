@@ -18,15 +18,25 @@ def update_message_count(chat_id, user_id):
 
 # Function to get top members in a group
 def get_top_members(chat_id):
-    return sorted(group_data[chat_id].items(), key=lambda x: x[1], reverse=True)
+    return sorted(group_data[chat_id].items(), key=lambda x: x[1], reverse=True)[:10]
 
 # Function to display top members in a group
 def display_top_members(bot, update):
     chat_id = update.chat.id
     top_members = get_top_members(chat_id)
-    message = "Top Members in this Group:\n"
+    message = "Top 10 Members in this Group:\n"
     for i, (user_id, message_count) in enumerate(top_members, start=1):
         message += f"{i}. User ID: {user_id}, Messages: {message_count}\n"
+    bot.send_message(chat_id, message)
+
+# Function to handle /rankings command
+@app.on_message(Filters.command("rankings", prefixes="/"))
+def handle_rankings_command(bot, update):
+    chat_id = update.chat.id
+    top_members = get_top_members(chat_id)
+    message = "Top 10 Members in this Group:\n"
+    for i, (user_id, message_count) in enumerate(top_members, start=1):
+        message += f"{i}. User ID: {user_id}, Total Messages: {message_count}\n"
     bot.send_message(chat_id, message)
 
 # Function to handle incoming messages
@@ -50,4 +60,3 @@ scheduler.start()
 
 # Start the bot
 app.run()
-  
