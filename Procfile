@@ -1,1 +1,1 @@
-mrdaxx: python -m daxxop
+mrdaxx: python -m rankbot
