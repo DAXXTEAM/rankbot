@@ -1,25 +1,24 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from rankbot import rankbot as app
-from config import BOT_USERNAME, OWNER_ID, LOGGER_ID
+from config import BOT_USERNAME, OWNER_ID
 import config
 from pyrogram.types import InputMediaVideo
 import random 
 from pyrogram.types import Message
 import asyncio
+
 # --------------------------------------------------------------------------
 
 start_txt = """
 **🤖 *𝖱𝖠𝖭𝖪𝖨𝖭𝖦 𝖡𝖮𝖳*
 
-𝖧𝖤𝖫𝖫𝖮 {}! \n\n👋 𝖨'𝖬 𝖸𝖮𝖴𝖱 𝖥𝖱𝖨𝖤𝖭𝖣𝖫𝖸 𝖱𝖠𝖭𝖪𝖨𝖭𝖦 𝖡𝖮𝖳. \n
+𝖧𝖤𝖫𝖫𝖮  \n\n👋 𝖨'𝖬 𝖸𝖮𝖴𝖱 𝖥𝖱𝖨𝖤𝖭𝖣𝖫𝖸 𝖱𝖠𝖭𝖪𝖨𝖭𝖦 𝖡𝖮𝖳. \n
 🚀 𝖢𝖴𝖱𝖨𝖮𝖴𝖲 𝖠𝖡𝖮𝖴𝖳 𝖳𝖧𝖤 𝖬𝖮𝖲𝖳 𝖠𝖢𝖩𝖨𝖵𝖤 𝖬𝖤𝖬𝖡𝖤𝖱𝖲?
 𝖲𝖳𝖠𝖸 𝖳𝖴𝖭𝖤𝖣 𝖥𝖮𝖱 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 𝖮𝖧 𝖬𝖤𝖲𝖲𝖠𝖦𝖨𝖭𝖦 𝖠𝖢𝖧𝖨𝖤𝖵𝖤𝖬𝖤𝖭𝖳𝖲!
 𝖪𝖤𝖤𝖯 𝖳𝖧𝖮𝖲𝖤 𝖢𝖮𝖭𝖵𝖤𝖱𝖲𝖠𝖳𝖨𝖮𝖭𝖲 𝖥𝖫𝖮𝖶𝖨𝖭𝖦. 🚀✨!**
 """
 # --------------------------------------------------------------------------------
 @app.on_message(filters.command("start") & filters.private)
-#@app.on_message(filters.command("start"))
 async def start(_, msg):
     buttons = [
         [ 
