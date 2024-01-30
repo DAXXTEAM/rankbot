@@ -18,8 +18,8 @@ start_txt = """
 𝖪𝖤𝖤𝖯 𝖳𝖧𝖮𝖲𝖤 𝖢𝖮𝖭𝖵𝖤𝖱𝖲𝖠𝖳𝖨𝖮𝖭𝖲 𝖥𝖫𝖮𝖶𝖨𝖭𝖦. 🚀✨!**
 """
 # --------------------------------------------------------------------------------
-
-@app.on_message(filters.command("start"))
+@app.on_message(filters.command("start") & filters.private)
+#@app.on_message(filters.command("start"))
 async def start(_, msg):
     buttons = [
         [ 
