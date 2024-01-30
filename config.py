@@ -17,4 +17,5 @@ OWNER_ID = int(os.environ.get("OWNER_ID"))
 # ------------------------------------------------
 LOGGER_ID = int(os.environ.get("LOGGER_ID"))
 # ------------------------------------------------
+MONGO_URL = os.environ.get("MONGO_URL")
 # ------------------------------------------------
