@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from rankbot import rankbot as app
 import config
-from config import OWNER_ID, BOT_TOKEN, BOT_USERNAME
+from config import OWNER_ID, BOT_USERNAME
 
 # --------------------------------------------------------------------------
 
