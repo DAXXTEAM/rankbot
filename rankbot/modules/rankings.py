@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from pymongo import MongoClient
 from pyrogram.types import Message
 import os
-from daxxop import daxxop as app
+from rankbot import rankbot as app
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 # --------------------------------------------------------------------------
