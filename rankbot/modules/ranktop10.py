@@ -32,12 +32,12 @@ def top_members(_, message):
         
         try:
             user = app.get_users(user_id)
-            first_name = user.first_name if user.first_name else "Unknown"
+            Mention = user.mention if user.mention else "none"
         except PeerIdInvalid:
             first_name = "Unknown"
         
         total_messages = member["total_messages"]
-        user_info = f"{idx}. 👤{first_name}, •{total_messages}\n"
+        user_info = f"{idx}. 👤{Mention}, •{total_messages}\n"
         response += user_info
 
     message.reply_text(response)
