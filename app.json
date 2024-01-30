@@ -1,0 +1,33 @@
+{
+  "name": "telegram-bot-app",
+  "description": "Telegram Bot using Pyrogram",
+  "repository": "https://github.com/DAXXTEAM/rankbot",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token",
+      "required": true
+    },
+    "BOT_USERNAME": {
+      "description": "Your Bot Username",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Your Telegram User ID (Owner)",
+      "required": true
+    },
+    "LOGGER_ID": {
+      "description": "Your Logger Chat ID",
+      "required": true
+    }
+  },
+  "stack": "heroku-20"
+      }
+        
