@@ -1,9 +1,8 @@
+
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from config import BOT_USERNAME, OWNER_ID
-import config
-from pyrogram.types import InputMediaVideo
-import random 
+from rankbot import rankbot as app
 from pyrogram.types import Message
 import asyncio
 
