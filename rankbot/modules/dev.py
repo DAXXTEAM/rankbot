@@ -10,7 +10,7 @@ from time import time
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
-from daxxop import daxxop as app
+from rankbot import rankbot as app
 from config import OWNER_ID
 
 
