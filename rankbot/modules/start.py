@@ -18,7 +18,7 @@ start_txt = """
 """
 # --------------------------------------------------------------------------------
 @app.on_message(filters.command("start") & filters.private)
-async def start(_, msg):
+async def start(_, message):
     buttons = [
         [ 
             InlineKeyboardButton("➕𝖠𝖣𝖣 𝖬𝖤 𝖨𝖭 𝖸𝖮𝖴𝖱 𝖦𝖱𝖮𝖴𝖯➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
@@ -31,7 +31,7 @@ async def start(_, msg):
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await msg.reply_photo(
+    await message.reply_photo(
         photo="https://graph.org/file/f77b368fdbc1431973c36.jpg",
         caption=start_txt,
         reply_markup=reply_markup
