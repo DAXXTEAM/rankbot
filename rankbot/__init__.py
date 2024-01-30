@@ -31,10 +31,10 @@ rankbot = Client(
 
 
 
-async def daxxop_bot():
+async def rankbot_bot():
     global BOT_ID, BOT_NAME, BOT_USERNAME
-    await daxxop.start()
-    getme = await daxxop.get_me()
+    await rankbot.start()
+    getme = await rankbot.get_me()
     BOT_ID = getme.id
     BOT_USERNAME = getme.username
     if getme.last_name:
@@ -43,4 +43,4 @@ async def daxxop_bot():
         BOT_NAME = getme.first_name
 
 
-loop.run_until_complete(daxxop_bot())
+loop.run_until_complete(rankbot_bot())
